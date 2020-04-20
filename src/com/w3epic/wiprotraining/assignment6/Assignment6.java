@@ -5,37 +5,29 @@ Implement the assignment 1 using Linked List
 package com.w3epic.wiprotraining.assignment6;
 
 import java.util.LinkedList;
+import java.util.Scanner;
 
 import com.w3epic.wiprotraining.assignment1.Assignment1;
 
-public class Assignment6 {
-	private LinkedList<Integer> list = new LinkedList<Integer>();
+public class Assignment5 {
+	private LinkedList<String> list = new LinkedList<String>();
 	
-	public LinkedList<Integer> saveEvenNumbers(int N) {
-		list = new LinkedList<Integer>();
-		
-		for (int i = 2; i <= N; i++) {
-			if (i % 2 == 0) list.add(i);
+	public LinkedList<String> InputMonths() {
+		list = new LinkedList<String>();
+		Scanner sc=new Scanner(System.in);
+		for (int i = 0; i <= 12; i++) {
+			String month=sc.nextLine();
+                        list.add(month);
 		}
-		
-		return list;
-	}
-	
-	public LinkedList<Integer> printEvenNumbers() {
-		LinkedList<Integer> newList = new LinkedList<Integer>();
-		
-		for (int item : list) {
-			newList.add(item * 2);
-			System.out.println(item * 2);
+
+		for (String item : list) {
+			System.out.println(item);
 		}
-		
-		return newList;
 	}
 
 	public static void main(String[] args) {
-		Assignment1 asg = new Assignment1();
-		asg.saveEvenNumbers(10);
-		asg.printEvenNumbers();
+		Assignment5 asg = new Assignment5();
+		asg.InputMonths();
 		
 
 	}
